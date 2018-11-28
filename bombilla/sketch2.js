@@ -1,4 +1,3 @@
-var b1, b2, b3, b4, t, t1, r;
 
 var enchufada = null;
 var bombilla = null;
@@ -13,16 +12,26 @@ function setup() {
   b1.mousePressed(
     function(){
       enchufada = false;
+    
+
     }
   );
+
+
   b2 = createButton('si');
   b2.mousePressed(
     function(){
       enchufada = true;
+     
     }
   );
 
-  t1 = createDiv('tiene bombilla?');
+ 
+
+  r = createDiv(''); 
+  s = createDiv('...');
+
+    t1 = createDiv('tiene bombilla?');
   b3 = createButton('no');
   b3.mousePressed(
     function(){
@@ -33,22 +42,51 @@ function setup() {
   b4.mousePressed(
     function(){
       bombilla = true;
+     
     }
   );
-  var s = createDiv('...');
-  r = createDiv('');
+
+  r1 = createDiv(''); 
+  s1 = createDiv('...');
+
+ 
 }
 
-function draw()
+function draw() {
+   if (enchufada == false) {
+    s.html('enchufame');
+  } else {
+  null;
+  }
 
-{if () {
-  enchufada = true
-} else {
-r = createDiv('wallaponme');
-}
+
+  
+   if (enchufada == true) {
+    s.html('mira la bombilla');
+  } else {
+  null;
+    
+  }
+
+    if (bombilla == false) {
+    s1.html('pomela inutil');
+  } else {
+  null;
+  }
+
+
+  
+   if (bombilla == true) {
+    s1.html('buscate la vida');
+  } else {
+  null;
+    
+  }
   // afegir lógica
   // if ...
-
+  
   r.html("que hay que hacer?");
+  r1.html("i ahora que?");
+  
 
 }
