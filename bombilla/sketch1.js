@@ -6,6 +6,10 @@ var b1;
 function setup() {
 
   frameRate(10);
+  b2 = createButton('cambiame');
+  b2.mousePressed(
+    function(){
+      quemada = true; });
   b1 = createButton('enchufala');
   b1.mousePressed(function(){enchufada=true;});
   t = createDiv('mm')
@@ -18,10 +22,10 @@ function draw() {
 
       ///bombilla quemada?
       if ( quemada == true ){
-        t.html("cambiame la bombilla nen!");
+        createDiv("wALLAPONME");
       }
       else {
-        t.html("wallapopme!");
+        t.html("cambiame la bombilla nen!");
       }
     }
     else{
